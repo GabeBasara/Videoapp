@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Video Upload Platform </title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  <style>
+    .btnsubmitvideo{
+      background-color: blue;
+      padding: 5px 5px;
+      width: 100px;
+    }
+    .btnvideoupload{
+      background-color: blue;
+      padding: 5px 5px;
+      width: 100px;
+    }
+    .logout{
+      color: black;
+      padding: 7px 7px;
+      opacity: 0.8;
+      position: fixed;
+      left: 8px;
+      width: 150px;
+      top: 10px;
+    }
+
+    
+  </style>
+  <body>
+
+
+    <div  class="container">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center;">
+              <h3>Video Upload - Admin</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!-- A button to open the popup form -->
+<a href="index.html">Logout</a>
+<!-- The form -->
+
+  </form>
+</div>
+
+  </script>
+
+        <!--New Asset Box-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+              <p>Add Video</p>
+
+              <form style="font-size: 10pt;" id="newAssetForm">
+                <div class="mb-3">
+                  <label for="FileName" class="form-label">File Name</label>
+                  <input type="text" class="form-control" id="FileName">
+                </div>
+
+                <div class="mb-3">
+                  <label for="videoID" class="form-label">video name</label>
+                  <input type="string" class="form-control" id="videoID">
+                </div>
+
+                <div class="mb-3">
+                  <label for="videoName" class="form-label">video id</label>
+                  <input type="text" class="form-control" id="videoName">
+                </div>
+
+                <div class="mb-3">
+                  <label for="genre" class="form-label">Genre</label>
+                  <input type="text" class="form-control" id="genre">
+                </div>
+
+                <div class="mb-3">
+                  <label for="publisher" class="form-label">Publisher</label>
+                  <input type="text" class="form-control" id="publisher">
+                </div>
+
+                <div class="mb-3">
+                  <label for="rating" class="form-label">Rating</label>
+                  <input type="text" class="form-control" id="rating">
+                </div>
+
+                <div class="mb-3">
+                  <label for="UpFile" class="form-label">File to Upload</label>
+                  <input type="file" class="form-control" id="UpFile">
+                </div>
+            
+                <button type="button" id="subNewForm" class="btnsubmitvideo">Submit</button> <br/><br/>
+                
+              </form>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!-- view Asset Area-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;" >
+              <div style="padding:5px;">
+                <button  id = "retImages" type="button" class="btnvideoupload">View Video</button>
+              </div>
+
+              <div id="ImageList">
+
+                <h4>Please click the view video button if you wish to view videos on the system.</h4>
+
+              
+
+
+              </div>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+    </div>
+  
+  </body>
+</html>

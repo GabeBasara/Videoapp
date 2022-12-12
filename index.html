@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Video Upload Platform</title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  <style>
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+    .open-button {
+      color: black;
+      padding: 7px 7px;
+      opacity: 0.8;
+      position: fixed;
+      left: 8px;
+      width: 150px;
+      top: 10px;
+    }
+    .form-container .btn {
+      background-color: red;
+      color: white;
+      padding: 16px 20px;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    .form-container {
+      max-width: 200px;
+      padding: 10px;
+      background-color: black;
+      color: #f1f1f1;
+      border: hidden;
+      position: fixed;
+      left: 10px;
+      top: 60px;
+    }
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    .authLogin{
+      display:none;
+    }
+    .btndeletevideo{
+      display:none;
+    }
+  </style>
+  <body>
+
+
+    <div  class="container">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center;">
+              <h3>Video Upload - login page</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!-- A button to open the popup form -->
+        <button class="login-button" onClick='loginAuthWithGit()'>Login With Github</button> <br>
+        <a href="userpage.html">User page</a> <br><br>
+        <script type="text/javascript">
+          
+          function loginAuthWithGit (){
+            window.location.href="https://github.com/login/oauth/authorize?client_id="
+          }
+          
+          </script>
+  
+  </body>
+</html>
