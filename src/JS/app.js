@@ -35,9 +35,14 @@ function submitNewAsset(){
 submitData = new FormData();
 //Get form variables and append them to the form data object
 submitData.append('FileName', $('#FileName').val());
-submitData.append('userID', $('#userID').val());
-submitData.append('userName', $('#userName').val());
+submitData.append('videoID', $('#videoID').val());
+submitData.append('videoName', $('#videoName').val());
 submitData.append('File', $("#UpFile")[0].files[0]);
+submitData.append('rating', $("#rating").val());
+submitData.append('publisher', $("#publisher").val());
+submitData.append('genre', $("#genre").val());
+
+
 
 //Post the form data to the endpoint, note the need to set the content type header
  $.ajax({
@@ -69,7 +74,9 @@ function getImages(){
    items.push( "<hr />");
    items.push("<video controls> <source type='video/mp4' src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />></video>")
    items.push( "File : " + val["fileName"] + "<br />");
-   items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+")<br />");
+   items.push( "Video Name: " + val["videoName"] + " <br>(video id: "+val["videoID"]+")<br />");
+   items.push(" genre: " + val["genre"] + "<br>publisher: " +val["publisher"]+"<br>");
+   items.push(" rating:" + val["rating"]+ "<br>reviewText" +val["reviewText"]+"<br>");
    items.push( "<hr />");
    items.push( '<button type="button" id="delete" class="btndeletevideo" onclick="deleteID(\''+val["id"] +'\')">Delete</button> <br/><br/>');
    items.push( '<textarea id="review" class="form-control" style="resize:none; height:100px;"></textarea> <br/>');

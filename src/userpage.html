@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
-    <title>Video Upload Platform </title>
+    <title>Video Upload Platform</title>
 
       <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
       <script type="text/javascript" src="JS/bootstrap.js"></script>
@@ -14,17 +14,15 @@
 
   </head>
   <style>
-    .btnsubmitvideo{
-      background-color: blue;
-      padding: 5px 5px;
-      width: 100px;
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
     }
-    .btnvideoupload{
-      background-color: blue;
-      padding: 5px 5px;
-      width: 100px;
-    }
-    .logout{
+    .open-button {
       color: black;
       padding: 7px 7px;
       opacity: 0.8;
@@ -33,8 +31,37 @@
       width: 150px;
       top: 10px;
     }
-
-    
+    .form-container .btn {
+      background-color: red;
+      color: white;
+      padding: 16px 20px;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    .form-container {
+      max-width: 200px;
+      padding: 10px;
+      background-color: black;
+      color: #f1f1f1;
+      border: hidden;
+      position: fixed;
+      left: 10px;
+      top: 60px;
+    }
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    .authLogin{
+      display:none;
+    }
+    .btndeletevideo{
+      display:none;
+    }
   </style>
   <body>
 
@@ -46,22 +73,31 @@
             <div class="col-2"  ></div>
 
             <div class="col-8" style="text-align: center;">
-              <h3>Video Upload - Admin</h3>
+              <h3>Video Upload - User</h3>
             </div>
 
             <div class="col-2"  ></div>
         </div>
 
         <!-- A button to open the popup form -->
-<a href="index.html">Logout</a>
-<!-- The form -->
-
+        <a href="admin.html">Admin shortcut</a> <br><br>
+  
+    </script>
   </form>
 </div>
 
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
   </script>
 
         <!--New Asset Box-->
+      <div class="authLogin">
         <div class="row align-items-start">
             <div class="col-2"  ></div>
 
@@ -70,33 +106,23 @@
 
               <form style="font-size: 10pt;" id="newAssetForm">
                 <div class="mb-3">
-                  <label for="FileName" class="form-label">File Name</label>
+                  <label for="FileName" class="form-label">Video Title</label>
                   <input type="text" class="form-control" id="FileName">
                 </div>
 
                 <div class="mb-3">
-                  <label for="videoID" class="form-label">video name</label>
-                  <input type="string" class="form-control" id="videoID">
+                  <label for="userID" class="form-label">Publisher</label>
+                  <input type="string" class="form-control" id="userID">
                 </div>
 
                 <div class="mb-3">
-                  <label for="videoName" class="form-label">video id</label>
-                  <input type="text" class="form-control" id="videoName">
+                  <label for="userName" class="form-label">Genre</label>
+                  <input type="text" class="form-control" id="userName">
                 </div>
 
                 <div class="mb-3">
-                  <label for="genre" class="form-label">Genre</label>
-                  <input type="text" class="form-control" id="genre">
-                </div>
-
-                <div class="mb-3">
-                  <label for="publisher" class="form-label">Publisher</label>
-                  <input type="text" class="form-control" id="publisher">
-                </div>
-
-                <div class="mb-3">
-                  <label for="rating" class="form-label">Rating</label>
-                  <input type="text" class="form-control" id="rating">
+                  <label for="userName" class="form-label">Genre</label>
+                  <input type="text" class="form-control" id="userName">
                 </div>
 
                 <div class="mb-3">
@@ -110,6 +136,7 @@
             </div>
 
             <div class="col-2"  ></div>
+          </div>
         </div>
 
         <!-- view Asset Area-->
@@ -118,15 +145,12 @@
 
             <div class="col-8" style="text-align: left;" >
               <div style="padding:5px;">
-                <button  id = "retImages" type="button" class="btnvideoupload">View Video</button>
+                <button  id = "retImages" type="button" class="btn btn-primary">View Video</button>
               </div>
 
               <div id="ImageList">
 
                 <h4>Please click the view video button if you wish to view videos on the system.</h4>
-
-              
-
 
               </div>
             </div>
