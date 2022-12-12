@@ -72,7 +72,7 @@ function getImages(){
    //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
    $.each( data, function( key, val ) {
    items.push( "<hr />");
-   items.push("<video controls> <source type='video/mp4' src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />></video>")
+   items.push("<video controls> <source type='video/mp4' src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400'/> <br />></video><br>")
    items.push( "File : " + val["fileName"] + "<br />");
    items.push( "Video Name: " + val["videoName"] + " <br>(video id: "+val["videoID"]+")<br />");
    items.push(" genre: " + val["genre"] + "<br>publisher: " +val["publisher"]+"<br>");
